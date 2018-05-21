@@ -1,25 +1,17 @@
-Try adding as many as these features as you can manage:
+# Simple Chat
 
-Update to ES6 Classes instead of function components
-Use FlatList to display messages
-Make messages grow for larger text
-Add Text Field on button to enter chat messages into the chat
-Align your messages to the right and everyone else to the left
-Group username headers so if the same person chats multiple times in a row it only shows once
-Add date like username is listed (grouped as above)
-Add multiple "Chat Channels" and a intro screen with a list of channels and the option to create a new one (new ones will have fake users added)
-Store Channel state in a new redux state
-Autogrow text input when adding new entries
-Autoscroll to bottom when new message arrives
-Prevent autoscroll if scrolled upwards viewing history (exception - when you send a new message)
-Change your email address in the chat
-Add speech bubble image behind each chat message
-Open "User page" by tapping on user image (just email and gravatar image)
-Add styling to show different colors for your message or theirs
-Replace any 4-letter words with '****', and for censoring, would you do this on sending the message , on entering it in the store or when displaying it and why?
+Welcome to Simple Chat! This basic chat app will simulate conversations with
 
+## Setup
 
-Bonus:
-- Add Typescript
+To use this application, you'll need to take the following steps:
+* Fork this repo onto your Github, and then clone onto your local machine.
+* Once completed, run `npm install` inside of the directory to obtain node modules.
+* Finally, run `exp start` to compile, and open the link on Expo to get chatting!
 
-
+## Features
+- View a list of channels on the Home Page
+- Navigate to individual channels to see messages unique to that chat log
+- Add a new channel
+- Add messages to chat log and view the user messages on the right hand side
+- View messages as scrollable
