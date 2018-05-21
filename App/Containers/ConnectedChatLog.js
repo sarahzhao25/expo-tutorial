@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import ChatLog from '../Components/ChatLog'
-
+import ChatLogFlatlist from '../Components/ChatLogFlatlist'
 
 const mapStateToProps = state => {
   return {
@@ -16,6 +16,6 @@ const mapDispatchToProps = dispatch => {
 const ConnectedChatLog = connect(
   mapStateToProps,
   mapDispatchToProps
-)(ChatLog)
+)(ChatLogFlatlist)
 
 export default ConnectedChatLog
