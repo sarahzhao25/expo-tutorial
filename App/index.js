@@ -7,6 +7,7 @@ import createSagaMiddleware from 'redux-saga'
 import ConnectedChatLog from './Containers/ConnectedChatLog'
 import SimpleChatApp from './Reducers'
 import SimpleChatSaga from './Sagas'
+import ChatMessageForm from './Containers/ConnectedChatMessageForm'
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
@@ -22,6 +23,7 @@ export default class App extends React.Component {
       <Provider store={store}>
         <View style={styles.container}>
            <ConnectedChatLog />
+           <ChatMessageForm />
          </View>
       </Provider>
     )
