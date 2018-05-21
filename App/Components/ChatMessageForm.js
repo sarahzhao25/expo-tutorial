@@ -30,7 +30,7 @@ class ChatMessageForm extends Component {
         <Button
           onPress={() => {
             handleSubmit(this.state)
-            this.setState({message: ''})
+            this.setState({ message: '' })
           }}
           title="Submit"
         />

@@ -10,7 +10,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    handleSubmit: (name) => dispatch(addChannel(name))
+    handleSubmit: name => dispatch(addChannel(name))
   }
 }
 

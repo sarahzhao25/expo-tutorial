@@ -23,7 +23,7 @@ class ChannelLogForm extends Component {
         <Button
           onPress={() => {
             handleSubmit(this.state)
-            this.setState({name: ''})
+            this.setState({ name: '' })
           }}
           title="Submit"
         />
