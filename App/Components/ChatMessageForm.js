@@ -6,21 +6,22 @@ class ChatMessageForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      user_email: '',
+      user_email: this.props.currentUser.user_email,
       message: ''
     }
   }
 
   render() {
-    const { handleSubmit } = this.props
+    const { handleSubmit, currentUser } = this.props
     return (
       <View style={{padding: 20, marginBottom: 10}}>
+      {!currentUser.user_email &&
         <TextInput
           placeholder="Email Address"
           name="user_email"
           onChangeText={(user_email) => this.setState({ user_email })}
           value={this.state.user_email}
-        />
+        />}
         <TextInput
           placeholder="Message here"
           name="message"
