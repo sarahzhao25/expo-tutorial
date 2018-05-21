@@ -1,6 +1,6 @@
 # Simple Chat
 
-Welcome to Simple Chat! This basic chat app will simulate conversations with
+Welcome to Simple Chat! This basic chat app will simulate conversations over various channels.
 
 ## Setup
 
