@@ -11,7 +11,7 @@ const ChatMessage = ({ chatMessage }) => {
 
   return chatMessage.isUser ?
     (
-      <View style={{flex: 1, flexDirection: 'row', alignSelf: 'flex-end', height: 60, maxHeight: 60}}>
+      <View style={{flex: 1, flexDirection: 'row', alignSelf: 'flex-end', height: 60, maxHeight: 60, backgroundColor: '#007AFF'}}>
         <Text>{chatMessage.message}</Text>
         <Image
           style={styles.roundedProfileImage}
@@ -20,7 +20,7 @@ const ChatMessage = ({ chatMessage }) => {
     )
     :
     (
-      <View style={{flex: 1, flexDirection: 'row', alignSelf: 'flex-start', height: 60, maxHeight: 60}}>
+      <View style={{flex: 1, flexDirection: 'row', alignSelf: 'flex-start', height: 60, maxHeight: 60, backgroundColor: 'lightgrey'}}>
         <Image
         style={styles.roundedProfileImage}
         source={{uri: avatarUrl}} />
