@@ -9,14 +9,24 @@ const ChatMessage = ({ chatMessage }) => {
                       parameters: { size: '50', d: 'monsterid'},
                     }).replace('http', 'https')
 
-  return (
-    <View style={{flex: 1, flexDirection: 'row', alignSelf: 'flex-end', height: 60, maxHeight: 60}}>
-      <Text>{chatMessage.message}</Text>
-      <Image
+  return chatMessage.isUser ?
+    (
+      <View style={{flex: 1, flexDirection: 'row', alignSelf: 'flex-end', height: 60, maxHeight: 60}}>
+        <Text>{chatMessage.message}</Text>
+        <Image
+          style={styles.roundedProfileImage}
+          source={{uri: avatarUrl}} />
+      </View>
+    )
+    :
+    (
+      <View style={{flex: 1, flexDirection: 'row', alignSelf: 'flex-start', height: 60, maxHeight: 60}}>
+        <Image
         style={styles.roundedProfileImage}
         source={{uri: avatarUrl}} />
-    </View>
-  )
+        <Text>{chatMessage.message}</Text>
+      </View>
+    )
 }
 
 const styles = StyleSheet.create({

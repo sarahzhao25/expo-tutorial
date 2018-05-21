@@ -2,6 +2,7 @@ const defaultState = [
   {
     user_email: 'a@b.com',
     message: 'Hello world!',
+    isUser: false
   },
 ]
 
@@ -13,19 +14,21 @@ export const addMessage = ({user_email, message}) => {
   return {
     type: ADD_MESSAGE,
     user_email,
-    message
+    message,
+    isUser: true
   }
 }
 
 const chat = (state = defaultState, action) => {
   switch (action.type) {
     case 'ADD_MESSAGE':
-      let { user_email, message } = action;
+      let { user_email, message, isUser } = action;
       return [
         ...state,
         {
           user_email,
           message,
+          isUser
         }
       ]
     default:
