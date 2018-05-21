@@ -11,7 +11,7 @@ const ChatMessage = ({ chatMessage }) => {
 
   return chatMessage.isUser ?
     (
-      <View style={{flex: 1, flexDirection: 'row', alignSelf: 'flex-end', height: 60, maxHeight: 60, backgroundColor: '#007AFF'}}>
+      <View style={{flex: 1, flexDirection: 'row', alignSelf: 'flex-end', height: 60, maxHeight: 60, backgroundColor: '#007AFF', margin: 10}}>
         <Text>{chatMessage.message}</Text>
         <Image
           style={styles.roundedProfileImage}
