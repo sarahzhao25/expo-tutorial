@@ -1,14 +1,16 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 import ConnectedChatLog from '../Containers/ConnectedChatLog'
-import ChatMessageForm from './ChatMessageForm'
+import ConnectedChatMessageForm from '../Containers/ConnectedChatMessageForm'
 
-const SingleChat = () => (
+const SingleChat = ({ navigation }) => {
+  const { channelId } = navigation.state.params
+  return (
   <View style={styles.container}>
-    <ConnectedChatLog />
-    <ChatMessageForm />
+    <ConnectedChatLog channelId={ channelId } />
+    <ConnectedChatMessageForm channelId={ channelId } />
   </View>
-)
+)}
 
 const styles = StyleSheet.create({
   container: {

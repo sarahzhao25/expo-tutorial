@@ -8,9 +8,9 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    handleSubmit: (messageInfo) => dispatch(addMessage(messageInfo))
+    handleSubmit: (messageInfo) => dispatch(addMessage(messageInfo, ownProps.channelId))
   }
 }
 
