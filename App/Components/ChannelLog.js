@@ -1,6 +1,7 @@
 import React from 'react'
 import { FlatList, View, Text } from 'react-native'
 import PropTypes from 'prop-types'
+import ConnectedChannelLogForm from '../Containers/ConnectedChannelLogForm';
 
 const ChannelLog = ({ channels, navigate }) => (
   <View style={{flex: 1, flexDirection: 'column', width: '100%'}} >
@@ -13,6 +14,7 @@ const ChannelLog = ({ channels, navigate }) => (
       )}
       keyExtractor= {item => item.id}
     />
+    <ConnectedChannelLogForm />
   </View>
 )
 

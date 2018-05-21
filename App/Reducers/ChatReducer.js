@@ -23,7 +23,7 @@ export const addMessage = ({user_email, message}, channelId) => {
 
 const chat = (state = defaultState, action) => {
   switch (action.type) {
-    case 'ADD_MESSAGE':
+    case ADD_MESSAGE:
       let { user_email, message, isUser, channelId } = action;
       return [
         ...state,

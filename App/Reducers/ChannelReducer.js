@@ -13,21 +13,32 @@ const defaultState = [
   }
 ]
 
+let id = 3
+
 //action type creator
 const ADD_CHANNEL = 'ADD_CHANNEL'
 
 //action creator
-const addChannel = channel => {
+export const addChannel = ({ name }) => {
+  id++
   return {
     type: ADD_CHANNEL,
-    channel
+    name,
+    id
   }
 }
 
 const channel = (state = defaultState, action) => {
   switch (action.type) {
     case ADD_CHANNEL:
-      return [...state, action.channel]
+      let { name, id } = action;
+      return [
+        ...state,
+        {
+          id,
+          name
+        }
+      ]
     default:
       return state
   }
