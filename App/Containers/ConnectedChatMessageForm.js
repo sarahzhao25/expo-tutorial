@@ -14,6 +14,9 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-const connectedChatMessageForm = connect(mapStateToProps, mapDispatchToProps)(ChatMessageForm)
+const connectedChatMessageForm = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ChatMessageForm)
 
 export default connectedChatMessageForm

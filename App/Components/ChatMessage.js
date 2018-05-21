@@ -20,7 +20,7 @@ const ChatMessage = ({ chatMessage }) => {
     )
     :
     (
-      <View style={{flex: 1, flexDirection: 'row', alignSelf: 'flex-start', height: 60, maxHeight: 60, backgroundColor: 'lightgrey'}}>
+      <View style={{flex: 1, flexDirection: 'row', alignSelf: 'flex-start', height: 60, maxHeight: 60, backgroundColor: 'lightgrey', margin: 10}}>
         <Image
         style={styles.roundedProfileImage}
         source={{uri: avatarUrl}} />
