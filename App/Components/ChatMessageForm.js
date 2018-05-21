@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { KeyboardAvoidingView, TextInput, View } from 'react-native'
+import { TextInput, View } from 'react-native'
 import { Button } from 'react-native-elements'
 
 class ChatMessageForm extends Component {
@@ -30,7 +30,7 @@ class ChatMessageForm extends Component {
         <Button
           onPress={() => {
             handleSubmit(this.state)
-            this.setState({message: ''})
+            this.setState({ message: '' })
           }}
           title="Submit"
         />

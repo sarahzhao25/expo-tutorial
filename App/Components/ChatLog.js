@@ -7,7 +7,7 @@ const ChatLog = ({ chats }) => (
   <View style={{flex: 1, flexDirection: 'column', width: '100%'}} >
     <FlatList
       data={chats}
-      renderItem={({item}) => <ChatMessage chatMessage={item} /> }
+      renderItem={({ item }) => <ChatMessage chatMessage={item} /> }
       keyExtractor= {(item, index) => index}
     />
   </View>

@@ -2,7 +2,8 @@ const defaultState = [
   {
     user_email: 'a@b.com',
     message: 'Hello world!',
-    isUser: false
+    isUser: false,
+    channelId: 1
   },
 ]
 
@@ -10,25 +11,27 @@ const defaultState = [
 const ADD_MESSAGE = 'ADD_MESSAGE'
 
 //action creators
-export const addMessage = ({user_email, message}) => {
+export const addMessage = ({user_email, message}, channelId) => {
   return {
     type: ADD_MESSAGE,
     user_email,
     message,
-    isUser: true
+    isUser: true,
+    channelId
   }
 }
 
 const chat = (state = defaultState, action) => {
   switch (action.type) {
-    case 'ADD_MESSAGE':
-      let { user_email, message, isUser } = action;
+    case ADD_MESSAGE:
+      let { user_email, message, isUser, channelId } = action;
       return [
         ...state,
         {
           user_email,
           message,
-          isUser
+          isUser,
+          channelId
         }
       ]
     default:
