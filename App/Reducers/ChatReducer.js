@@ -26,13 +26,13 @@ const chat = (state = defaultState, action) => {
     case ADD_MESSAGE:
       let { user_email, message, isUser, channelId } = action;
       return [
-        ...state,
         {
           user_email,
           message,
           isUser,
           channelId
-        }
+        },
+        ...state
       ]
     default:
       return state

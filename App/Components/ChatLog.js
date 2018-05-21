@@ -6,6 +6,7 @@ import ChatMessage from './ChatMessage'
 const ChatLog = ({ chats }) => (
   <View style={{flex: 1, flexDirection: 'column', width: '100%'}} >
     <FlatList
+      inverted
       data={chats}
       renderItem={({ item }) => <ChatMessage chatMessage={item} /> }
       keyExtractor= {(item, index) => index}
