@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { KeyboardAvoidingView, TextInput } from 'react-native'
+import { KeyboardAvoidingView, TextInput, View } from 'react-native'
 import { Button } from 'react-native-elements'
 
 class ChatMessageForm extends Component {
@@ -11,15 +11,10 @@ class ChatMessageForm extends Component {
     }
   }
 
-  handleSubmit(handleSubmit) {
-    handleSubmit(this.state)
-    this.setState({user_email: '', message: ''})
-  }
-
   render() {
     const { handleSubmit } = this.props
     return (
-      <KeyboardAvoidingView>
+      <View style={{padding: 20, marginBottom: 10}}>
         <TextInput
           placeholder="Email Address"
           name="user_email"
@@ -33,10 +28,13 @@ class ChatMessageForm extends Component {
           value={this.state.message}
         />
         <Button
-          onPress={() => this.handleSubmit(handleSubmit)}
+          onPress={() => {
+            handleSubmit(this.state)
+            this.setState({user_email: '', message: ''})
+          }}
           title="Submit"
         />
-      </KeyboardAvoidingView>
+      </View>
     )
   }
 }
