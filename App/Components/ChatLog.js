@@ -1,22 +1,17 @@
 import React from 'react'
-import { View } from 'react-native'
+import { FlatList, View } from 'react-native'
 import PropTypes from 'prop-types'
 import ChatMessage from './ChatMessage'
 
-const ChatLog = ({ chats }) => {
-  let i = 0
-
-  return (
-    <View style={{flex: 1, flexDirection:'column', width: '100%'}} >
-      {chats.map(chatMessage => {
-        i = i + 1
-        return (
-          <ChatMessage key={`chat${i}`} chatMessage={chatMessage} />
-        )
-      })}
-    </View>
-  )
-}
+const ChatLog = ({ chats }) => (
+  <View style={{flex: 1, flexDirection: 'column', width: '100%'}} >
+    <FlatList
+      data={chats}
+      renderItem={({item}) => <ChatMessage chatMessage={item} /> }
+      keyExtractor= {(item, index) => index}
+    />
+  </View>
+)
 
 ChatLog.propTypes = {
   chats: PropTypes.arrayOf(
@@ -28,4 +23,3 @@ ChatLog.propTypes = {
 }
 
 export default ChatLog
-

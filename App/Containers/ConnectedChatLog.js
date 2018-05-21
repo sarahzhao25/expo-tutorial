@@ -1,7 +1,6 @@
 import { connect } from 'react-redux'
 import ChatLog from '../Components/ChatLog'
 
-
 const mapStateToProps = state => {
   return {
     chats: state.chats,

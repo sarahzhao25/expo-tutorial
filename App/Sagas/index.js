@@ -10,10 +10,10 @@ const emails = [
   'foo@bar.com',
 ]
 
-function* addChatsSaga() {
+function*addChatsSaga() {
   while (true) {
     yield delay(5000)
-    const email = emails[Math.floor(Math.random()*emails.length)];
+    const email = emails[Math.floor(Math.random() * emails.length)];
     yield put({
       type: 'ADD_MESSAGE',
       user_email: email,
