@@ -6,3 +6,4 @@ const simpleChatApp = combineReducers({
 })
 
 export default simpleChatApp
+export * from './ChatReducer'

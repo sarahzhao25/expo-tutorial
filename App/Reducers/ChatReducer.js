@@ -5,6 +5,17 @@ const defaultState = [
   },
 ]
 
+//action type creators
+const ADD_MESSAGE = 'ADD_MESSAGE'
+
+//action creators
+export const addMessage = ({user_email, message}) => {
+  return {
+    type: ADD_MESSAGE,
+    user_email,
+    message
+  }
+}
 
 const chat = (state = defaultState, action) => {
   switch (action.type) {
